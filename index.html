@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Guessing Game</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Card Guessing Game</h1>
+        <p>
+            Guess the hidden card by selecting one of the cards in the right-hand panel.
+            With each round, the card to guess is randomly chosen. By default, you have 
+            just one chance to guess the card, but you can increase this number by checking
+            the checkbox and entering a different value in the input box.
+        </p>
+    </header>
+
+    <main> <!-- GAME CONTAINER -->
+        <div>
+            <div class="tries">
+                <input type="checkbox" id="tries-checkbox">
+                <label for="tries-checkbox">More chances</label>
+                <input type="number" id="num-tries" min="1" max="9"  value="1" disabled/>
+            </div>
+        </div>
+
+        <div><!-- RESULTS PANEL -->
+            <div class="answer">
+                <img src="" alt="">
+            </div>
+            <div class="result">
+                <output>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </output>
+            </div>
+            <div>
+                <button id="show-btn" class="hidden">Show answer</button>
+                <button id="restart" class="hidden">Restart</button>
+                <button id="continue" class="hidden">Try again</button>
+            </div>
+        </div>
+
+        <div> <!-- SELECTION PANEL -->
+            <div class="tiles">
+                <div><input type="image" src="images/2_of_spades.svg" alt="2 of spades"></div>
+                <div><input type="image" src="images/3_of_diamonds.svg" alt="3 of diamonds"></div>
+                <div><input type="image" src="images/6_of_clubs.svg" alt="6 of clubs"></div>
+                <div><input type="image" src="images/10_of_hearts.svg" alt="10 of hearts"></div>
+                <div><input type="image" src="images/ace_of_clubs.svg" alt="ace of clubs"></div>
+                <div><input type="image" src="images/jack_of_hearts.svg" alt="jack of hearts"></div>
+                <div><input type="image" src="images/jack_of_spades.svg" alt="jack of spades"></div>
+                <div><input type="image" src="images/king_of_diamonds.svg" alt="king of diamonds"></div>
+                <div><input type="image" src="images/queen_of_spades.svg" alt="queen of spades"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>ACIT1620 Fundamental Web Technologies &copy;2024 by Yves Rene Shema</p>
+    </footer>
+
+    <!-- Load the game's logic -->
+    <script type="module" src="scripts/index.js"></script>
+</body>
+</html>
